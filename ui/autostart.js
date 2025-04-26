@@ -330,7 +330,7 @@ var AutostartDialog = GObject.registerClass(
     
                 return GLib.SOURCE_REMOVE;
             });
-            GLib.Source.set_name_by_id(this._timerId, '[gnome-shell-extension-another-window-session-manager] this._confirm');
+            GLib.Source.set_name_by_id(this._timerId, '[gnome-shell-extension-tadas-another-window-session-manager] this._confirm');
         }
 
         destroy() {

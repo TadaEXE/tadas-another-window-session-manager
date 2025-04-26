@@ -8,7 +8,7 @@ var PrefsUtils = class {
 
     constructor() {
         this.settings = ExtensionUtils.getSettings(
-            'org.gnome.shell.extensions.another-window-session-manager');
+            'org.gnome.shell.extensions.tadas-another-window-session-manager');
     }
 
     getSettingString(settingName) {

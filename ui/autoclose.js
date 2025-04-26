@@ -24,7 +24,7 @@ let GTop = null;
 try {
     GTop = imports.gi.GTop;
 } catch (e) {
-    Log.Log.getDefault().error(e, `GTop is not installed, I highly recommend to install it, so that a process can be closed safely. How to install it? Please visit: https://github.com/nlpsuge/gnome-shell-extension-another-window-session-manager#dependencies .`);
+    Log.Log.getDefault().error(e, `GTop is not installed, I highly recommend to install it, so that a process can be closed safely. How to install it? Please visit: https://github.com/nlpsuge/gnome-shell-extension-tadas-another-window-session-manager#dependencies .`);
 }
 
 const PrefsUtils = Me.imports.utils.prefsUtils;

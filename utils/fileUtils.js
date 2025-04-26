@@ -11,19 +11,19 @@ var data_dir = GLib.get_user_data_dir();
 var user_config = GLib.get_user_config_dir();
 // This extension can restore `xsm`'s session file, 
 // but desktop_file_id is missing in that file, so can't move them. Will be fixed in the future.
-var config_path_base = GLib.build_filenamev([user_config, 'another-window-session-manager']);
+var config_path_base = GLib.build_filenamev([user_config, 'tadas-another-window-session-manager']);
 // The session list
 var sessions_path = GLib.build_filenamev([config_path_base, 'sessions']);
 var sessions_backup_folder_name = 'backups';
 const sessions_backup_path = GLib.build_filenamev([sessions_path, sessions_backup_folder_name]);
 
 var desktop_template_path = GLib.build_filenamev([Me.path, '/template/template.desktop']);
-var desktop_template_path_restore_at_autostart = GLib.build_filenamev([Me.path, '/template/_gnome-shell-extension-another-window-session-manager.desktop']);
+var desktop_template_path_restore_at_autostart = GLib.build_filenamev([Me.path, '/template/_gnome-shell-extension-tadas-another-window-session-manager.desktop']);
 var desktop_template_path_restore_previous_at_autostart = GLib.build_filenamev([Me.path, '/template/_awsm-restore-previous-session.desktop']);
 var desktop_template_launch_app_shell_script = GLib.build_filenamev([Me.path, '/template/launch-app.sh']);
 
 var desktop_file_store_path_base = GLib.build_filenamev([data_dir, '/applications']);
-var desktop_file_store_path = `${desktop_file_store_path_base}/__another-window-session-manager`;
+var desktop_file_store_path = `${desktop_file_store_path_base}/__tadas-another-window-session-manager`;
 
 var recently_closed_session_name = 'Recently Closed Session';
 var recently_closed_session_path = GLib.build_filenamev([sessions_path, recently_closed_session_name]);
@@ -34,7 +34,7 @@ var current_session_path = `${config_path_base}/currentSession`;
 var current_session_summary_name = 'summary.json';
 var current_session_summary_path = GLib.build_filenamev([current_session_path, 'summary.json']);
 
-var autostart_restore_desktop_file_path = GLib.build_filenamev([user_config, '/autostart/_gnome-shell-extension-another-window-session-manager.desktop']);
+var autostart_restore_desktop_file_path = GLib.build_filenamev([user_config, '/autostart/_gnome-shell-extension-tadas-another-window-session-manager.desktop']);
 var autostart_restore_previous_desktop_file_path = GLib.build_filenamev([user_config, '/autostart/_awsm-restore-previous-session.desktop']);
 
 var desktop_template_path_ydotool_uinput_rules = GLib.build_filenamev([Me.path, '/template/60-awsm-ydotool-uinput.rules']);
@@ -71,9 +71,9 @@ async function loadFile(path) {
 
 /**
  * Get the absolute session path which contains sessions, 
- * it's `~/.config/another-window-session-manager` by default.
+ * it's `~/.config/tadas-another-window-session-manager` by default.
  * 
- * @param {string} baseDir base directory, `~/.config/another-window-session-manager/sessions` by default
+ * @param {string} baseDir base directory, `~/.config/tadas-another-window-session-manager/sessions` by default
  * @returns {string} the absolute session path which contains sessions
  */
 function get_sessions_path(baseDir = null) {
